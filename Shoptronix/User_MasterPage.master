@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 
+
 <html>
 <head runat="server">
     <link href="css/icons.css" rel="stylesheet" />
@@ -11,15 +12,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="text/javascript">
         window.onload = function () {
-            var elem = document.querySelector('.slider');
-            var HomeSlide = new M.Slider(elem);
+            var slider = document.querySelector('.slider');
+            var HomeSlide = new M.Slider(slider);
             HomeSlide.start();
 
 
         };
         function mySidenav() {
-            var instance = new M.Sidenav(document.querySelector('.sidenav'));
-            instance.open();
+            var sidenav = new M.Sidenav(document.querySelector('.sidenav'));
+            sidenav.open();
         }
     </script>
     <title>Shoptronix</title>
@@ -30,14 +31,14 @@
 <body>
     <form id="form1" runat="server">
         <ul id="slide-out" class="sidenav">
-            <li><a class="collapsible-header" href="#!"><i class="material-icons">home</i>Home</a></li>
+            <li><a class="collapsible-header" href="Home.aspx"><i class="material-icons">home</i>Home</a></li>
             <li class="no-padding">
                 <ul class="collapsible collapsible-accordion">
                     <li>
                         <a onclick="new M.Collapsible(document.querySelector('.collapsible'));" href="#!" class="collapsible-header"><i class="material-icons">shopping_basket</i>Products</a>
                         <div class="collapsible-body">
                             <ul>
-                                <li><a href="Products/Computer_parts.aspx"><i class="material-icons">computer</i>Computer parts</a></li>
+                                <li><a href="Computer_parts.aspx"><i class="material-icons">computer</i>Computer parts</a></li>
                                 <li><a href="#!"><i class="material-icons">devices_other</i>Mobile parts</a></li>
                                 <li><a href="#!"><i class="material-icons">developer_board</i>Other hardware parts</a></li>
                                 <li><a href="#!"><i class="material-icons">home</i>Fourth</a></li>
@@ -59,27 +60,17 @@
                             <a onclick="mySidenav();" href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><i class="material-icons">menu</i></a>
                             <a href="#" class="brand-logo">Shoptronix</a>
                         </div>
-                        <div class="col s12 m6">
+                        <div class="col s12 m8">
                             <form>
                                 <div class="input-field hoverable">
-                                    <input id="search" type="search" required />
+                                    <input id="search" type="search"  />
                                     <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                                     <i class="material-icons">close</i>
                                 </div>
                             </form>
                         </div>
-                        <div class="col  m4">
-                            <ul id="nav-mobile" class="right hide-on-med-and-down">
-
-                                <li>
-                                    <input placeholder="Username" id="Username" type="text" class="validate " />
-                                </li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                                <li>
-                                    <input placeholder="Password" id="Password" type="text" class="validate " />
-                                </li>
-                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                            </ul>
+                        <div class="col  m2">
+                                <button data-target="modal1" class="btn modal-trigger" onclick="new M.Modal(document.getElementById('modal1'));">Sign-in/Register</button>
                         </div>
                     </div>
                 </div>

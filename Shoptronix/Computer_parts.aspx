@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User_MasterPage.master" AutoEventWireup="true" CodeFile="Computer_parts.aspx.cs" Inherits="Products_Computer_parts" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User_MasterPage.master" AutoEventWireup="true" CodeFile="Computer_parts.aspx.cs" Inherits="Computer_parts" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div class="container">
+        <div class="container">
         <div class="row">
             <div class="col s12 l4">
                 <div class="card hoverable">
@@ -119,13 +119,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        window.onload=function () {
-            var instance = new M.Sidenav(document.querySelector('.sidenav'));
-            instance.open();
-        };
-
-    </script>
+    
 
 </asp:Content>
 
