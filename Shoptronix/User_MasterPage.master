@@ -15,8 +15,7 @@
             var slider = document.querySelector('.slider');
             var HomeSlide = new M.Slider(slider);
             HomeSlide.start();
-
-
+            new M.Tabs(document.querySelector('.tabs'));
         };
         function mySidenav() {
             var sidenav = new M.Sidenav(document.querySelector('.sidenav'));
@@ -63,14 +62,14 @@
                         <div class="col s12 m8">
                             <form>
                                 <div class="input-field hoverable">
-                                    <input id="search" type="search"  />
+                                    <input id="search" type="search" />
                                     <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                                     <i class="material-icons">close</i>
                                 </div>
                             </form>
                         </div>
                         <div class="col  m2">
-                                <button data-target="modal1" class="btn modal-trigger" onclick="new M.Modal(document.getElementById('modal1'));">Sign-in/Register</button>
+                            <button data-target="modal1" class="btn modal-trigger" onclick="new M.Modal(document.getElementById('modal1'));">Sign-in/Register</button>
                         </div>
                     </div>
                 </div>
@@ -80,36 +79,75 @@
         </div>
         <div id="modal1" class="modal">
             <div class="modal-content">
-
-                <div class="row">
-                    <form class="col s12">
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input placeholder="Placeholder" id="first_name" type="text" class="validate" />
-                                <label for="first_name">First Name</label>
-                            </div>
-                            <div class="input-field col s6">
-                                <input id="last_name" type="text" class="validate" />
-                                <label for="last_name">Last Name</label>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="password" type="password" class="validate" />
-                                <label for="password">Password</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input id="email" type="email" class="validate" />
-                                <label for="email">Email</label>
-                            </div>
-                        </div>
-
-                    </form>
+                <ul id="tabs-swipe-demo" class="tabs">
+                    <li class="tab"><a href="#sign_in">SIGN IN</a></li>
+                    <li class="tab"><a href="#sign_up">REGISTER</a></li>
+                </ul>
+                <div id="sign_in">
                 </div>
+                <div id="sign_up">
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input id="first_name" type="text" class="validate">
+                                    <label for="first_name">First Name</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="last_name" type="text" class="validate">
+                                    <label for="last_name">Last Name</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="input-field ">
+                                        <input id="email" type="email" class="validate">
+                                        <label for="email">Email</label>
+                                        <span class="helper-text" data-error="Please enter a valid email id" data-success="Email validated">Example xyz@gmail.com,prasad123@yahoo.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="mobileno" type="text" class="validate">
+                                    <label for="mobileno">Mobile number</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="homeno" type="text" class="validate">
+                                    <label for="homeno">Home number</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="state" type="text" class="validate">
+                                    <label for="state">State</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                    <label for="textarea1">Address</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="pincode" type="text" class="validate">
+                                    <label for="pincode">Pincode</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="password" type="password" class="validate">
+                                    <label for="password">Password</label>
+                                </div>
+                            </div>
+                            
+                        </form>
+                    </div>
 
+                </div>
             </div>
             <div class="modal-footer">
                 <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Sign Up</a>
